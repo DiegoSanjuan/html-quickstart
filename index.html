@@ -1,6 +1,99 @@
 <html>
-<body>
-Hello world in <b>HTML</b>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu:400,500,700|Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<style>
 
+h1, h2 {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	color: #2e4052;
+}
+
+.jumbotron {
+	background-color: #2e4052;
+}
+
+.jumbotron h1, h2 {
+	color: #FFF;
+}
+
+h1.lead {
+	font-size: 46px;
+}
+
+h2.sub {
+	font-size: 30px;
+	line-height: 1.6;
+}
+
+h1.and {
+	color: #1b2936;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.logo-block {
+	margin-top: 20px;
+  border:5px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  margin-left:10px;
+  -webkit-box-reflect: below 0.5px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(75%,transparent),to(rgba(255,255,255,0.4)));
+}
+
+.logo-block:hover {
+	border:5px solid rgba(255,255,255,1);
+  -webkit-transition:all ease-in 0.3s;/*Chrome*/
+  -moz-transition:all ease-in 0.3s;/*Firefox*/
+  -o-transition:all ease-in 0.3s;/*Opera*/
+  -ms-transition:all ease-in 0.3s;/*Microsoft*/
+}
+
+.logo {
+	height: 120px;
+	padding: 30px;
+}
+
+.title {
+	margin-top: 15px;
+	padding-left: 100px;
+}
+
+</style>
+<body>
+	<div class="main">
+		<div class="jumbotron">
+			<div class="container">
+			<div class="col-lg-5 text-center logo-block">
+				<img class="logo" src="https://dl.dropboxusercontent.com/u/11221717/elasticbox-flat-color-white.svg"></img>
+				<h1 class="and">&</h1>
+				<img class="logo" src="http://www.docker.com/static/img/docker-white.svg"></img>
+			</div>
+			<div class="col-lg-6 title">
+				<h1 class="lead">Boexes and Containers</h1>
+				<h2 class="sub">Modern Workflow For Your Flexible Application Topologies.</h2>
+				<button class="btn btn-default">VIEW ON GITHUB</button>
+			</div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="col-lg-4">
+				<h3>Getting Started</h3>
+				<ul>
+					<ul>What is ElasticBox</ul>
+					<ul>What is a container</ul>
+					<ul>Something</ul>
+					<ul>Something</ul>
+
+				</ul>
+			</div>
+		</div>	
+	</div>
 </body>
 </html>
