@@ -45,20 +45,43 @@ h1.and {
 	margin-bottom: -10px;
 }
 
-.logo-block {
-	margin-top: 20px;
-  border:5px dotted rgba(255,255,255,0.2);
-  border-radius: 4px;
-  margin-left:10px;
-  -webkit-box-reflect: below 0.5px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(75%,transparent),to(rgba(255,255,255,0.4)));
+.col-lg-5 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
-.logo-block:hover {
-	border:5px solid rgba(255,255,255,1);
-  -webkit-transition:all ease-in 0.3s;/*Chrome*/
-  -moz-transition:all ease-in 0.3s;/*Firefox*/
-  -o-transition:all ease-in 0.3s;/*Opera*/
-  -ms-transition:all ease-in 0.3s;/*Microsoft*/
+.logo-block {
+	height: 334px;
+	padding-top: 25px;
+	border-radius: 4px;
+	margin-top: 60px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 6px;
+	margin-left: 10px;
+}
+
+.indicators {
+	margin-top: -20px;
+	padding-top: 3px;
+	padding-left: 3px;
+	height: 20px;
+	width: 70px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 9px;
+	height: 9px;
+	background-color: #d8d6df;
+	float: left;
+	margin-right: 5px;
+}
+
+.logo-inner {
+	background-color: #2e4052;
+	height: 300px;
 }
 
 .logo {
@@ -77,12 +100,19 @@ h1.and {
 		<div class="jumbotron">
 			<div class="container">
 			<div class="col-lg-5 text-center logo-block">
-				<img class="logo" src="https://dl.dropboxusercontent.com/u/11221717/elasticbox-flat-color-white.svg"></img>
-				<h1 class="and">&</h1>
-				<img class="logo" src="http://www.docker.com/static/img/docker-white.svg"></img>
+				<div class="indicators">
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
+				<div class="logo-inner">
+					<img class="logo" src="https://dl.dropboxusercontent.com/u/11221717/elasticbox-flat-color-white.svg"></img>
+					<h1 class="and">&</h1>
+					<img class="logo" src="http://www.docker.com/static/img/docker-white.svg"></img>
+				</div>	
 			</div>
 			<div class="col-lg-6 title">
-				<h1 class="lead">Boxes and Containers</h1>
+				<h1 class="lead">Deploy In Mintues With Tools You Love</h1>
 				<h2 class="sub">A Modern Workflow For Your Flexible Application Topologies.</h2>
 				<button class="btn btn-default">VIEW ON GITHUB</button>
 			</div>
@@ -92,10 +122,10 @@ h1.and {
 			<div class="col-lg-4">
 				<h3>Getting Started</h3>
 				<ul>
-					<ul>What is ElasticBox</ul>
-					<ul>What is a container</ul>
-					<ul>Something</ul>
-					<ul>Something</ul>
+					<li>What is ElasticBox</li>
+					<li>What is a container</li>
+					<li>Something</li>
+					<li>Something</li>
 
 				</ul>
 			</div>
