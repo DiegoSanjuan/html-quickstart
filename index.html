@@ -17,6 +17,11 @@ h1, h2 {
 	color: #2e4052;
 }
 
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+
 .jumbotron {
 	background-color: #2e4052;
 	margin-top: -30px;
@@ -27,7 +32,6 @@ h1, h2 {
 }
 
 .btn {
-	margin-top: 20px;
 	color: #fff;
 }
 
@@ -48,6 +52,10 @@ h1, h2 {
 .open .dropdown-toggle.btn-default{
   background-color: #596e82;
   border-color: #596e82;
+}
+
+.btn-github {
+	margin-top: 20px;
 }
 
 h1.lead {
@@ -116,8 +124,28 @@ h1.and {
 	padding-left: 100px;
 }
 
+.get-started li {
+	font-size: 20px;
+	list-style: none;
+	margin-left: -40px;
+}
+
 </style>
 <body>
+	<header class="navbar navbar-default" role="banner">
+  <div class="container">
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar">
+      	<li><a>Deployed With ElasticBox</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li{% if page.slug == "about" %} class="active"{% endif %}>
+          <button type="button" href="#sign-up-modal" class="btn btn-default navbar-btn hidden-xs">TRY FOR FREE</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 	<div class="main">
 		<div class="jumbotron">
 			<div class="container">
@@ -136,20 +164,27 @@ h1.and {
 			<div class="col-lg-6 title">
 				<h1 class="lead">Deploy In Mintues With Tools You Love</h1>
 				<h2 class="sub">A Modern Workflow For Your Flexible Application Topologies.</h2>
-				<button class="btn btn-default"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
+				<button class="btn btn-default btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
 			</div>
 		</div>
 		</div>
 		<div class="container">
-			<div class="col-lg-4">
+			<div class="col-lg-3">
 				<h3>Getting Started</h3>
-				<ul>
-					<li>What is ElasticBox</li>
-					<li>What is a container</li>
-					<li>Something</li>
+				<hr></hr>
+				<ul class="get-started">
+					<li>Sign Up For ElasticBox</li>
+					<li>What Is A Box</li>
+					<li>What Is A Container</li>
 					<li>Something</li>
 
 				</ul>
+			</div>
+			<div class="col-lg-8">
+				<h3>Deploy This Website With Docker And ElasticBox.</h3>
+				<hr></hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
 			</div>
 		</div>	
 	</div>
