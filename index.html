@@ -59,7 +59,7 @@ p {
 }
 
 h1.lead {
-	margin-top: 40px;
+	margin-top: 25px;
 	font-size: 46px;
 }
 
@@ -86,7 +86,7 @@ h1.and {
 	height: 334px;
 	padding-top: 25px;
 	border-radius: 4px;
-	margin-top: 60px;
+	margin-top: 25px;
 	background-color: rgba(255,255,255,0.2);
 	border-radius: 6px;
 	margin-left: 10px;
@@ -125,9 +125,29 @@ h1.and {
 }
 
 .get-started li {
-	font-size: 20px;
+	font-size: 18px;
 	list-style: none;
 	margin-left: -40px;
+}
+
+.deployed-with {
+	margin-left: -20px;
+}
+
+.navbar-default .navbar-nav>li>a.twitter {
+	color: #55acee;
+}
+
+.navbar-default .navbar-nav>li>a.twitter:hover {
+	color: #78B7E7;
+}
+
+.navbar-default .navbar-nav>li>a.google-plus {
+	color: #dd4c39;
+}
+
+.navbar-default .navbar-nav>li>a.google-plus:hover {
+	color: #dc6656;
 }
 
 </style>
@@ -136,7 +156,11 @@ h1.and {
   <div class="container">
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav navbar">
-      	<li><a>Deployed With ElasticBox</a></li>
+      	<li><a href="deployed-with">Deployed With ElasticBox</a></li>
+      	<li><a class="twitter" href="http://twitter.com/share?text=I%20just%20deployed%20a%20website%20using%20Docker%20and%20ElasticBox%20&via=ElasticBox&url=http%3A%2F%2Fwww.elasticbox.com" target="_blank" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i> Tweet</a></li>
+      	<li><a class="google-plus" href="https://plus.google.com/share?url={http://www.elasticbox.com}&text={I just deployed a website using Docker and ElasticBox}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i> Share</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li{% if page.slug == "about" %} class="active"{% endif %}>
@@ -164,7 +188,7 @@ h1.and {
 			<div class="col-lg-6 title">
 				<h1 class="lead">Deploy In Mintues With Tools You Love</h1>
 				<h2 class="sub">A Modern Workflow For Your Flexible Application Topologies.</h2>
-				<button class="btn btn-default btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
+				<button class="btn btn-default btn-lg btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
 			</div>
 		</div>
 		</div>
@@ -181,10 +205,30 @@ h1.and {
 				</ul>
 			</div>
 			<div class="col-lg-8">
-				<h3>Deploy This Website With Docker And ElasticBox.</h3>
-				<hr></hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+				<div class="row">
+					<h3>Getting Started.</h3>
+					<hr></hr>
+					<p>You can deploy this static website on AWS using ElasticBox and Docker. We have created a very simple Docker container in ElasticBox that allows you to take static html from a Github repo and deploy on your Amazon Web Services account or other provider of your choice.</p>
+					<p>In order to deploy this website, you’ll need a few things. First, you will need an account on <a href="">ElasticBox</a>. If you don’t already have an account, you can sign up <a href="">here</a>. You’ll also need an account on <a href="">Amazon Web Services</a>. If you don’t already have an account, you can setup your account <a href="">here</a>.</p>
+					<p>Once that’s done, you can deploy this site within minutes by following the steps below! </p>
+				</div>
+				<div class="row">
+					<h3>Deploy This Website With Docker And ElasticBox.</h3>
+					<hr></hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+				</div>
+				<div class="row">
+					<h3>What is ElasticBox and what are Boxes?</h3>
+					<hr></hr>
+					<p>ElasticBox makes it easy for developers and enterprises to deploy and manage their applications on any cloud infrastructure. ElasticBox provides a simplified, modular, service based application development structure, where fully configured components of an application architecture are encapsulated as “Boxes” and made available as a service. </p>
+					<p>Boxes are reusable, versionable, available as a service, and then fully mobile across cloud environments. To create a multi-tier application architecture, one simply “stacks” Boxes. The result? DevOps at your fingertips.</p>
+				</div>
+				<div class="row">
+					<h3>What is Docker and what are Containers?</h3>
+					<hr></hr>
+					<p>Docker is an open-source project to easily create lightweight, portable, self-sufficient containers from any application. The same container that a developer builds and tests on a laptop can run at scale, in production, on VMs, bare metal, OpenStack clusters, public clouds and more.</p>
+				</div>
 			</div>
 		</div>	
 	</div>
