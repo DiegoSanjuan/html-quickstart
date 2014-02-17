@@ -1,6 +1,248 @@
-<html>
-<body>
-Hello world in <b>HTML</b>
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Deploy a static website on Amazon Web Services using ElasticBox and Docker. Sign up for free and get started right away.">
+	<meta name="author" content="ElasticBox">
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Ubuntu:400,500,700|Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<style>
 
+h1, h2 {
+	font-family: 'Ubuntu';
+	font-weight: 400;
+	color: #2e4052;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.jumbotron {
+	background-color: #2e4052;
+	margin-top: -30px;
+}
+
+.jumbotron h1, h2 {
+	color: #FFF;
+}
+
+.btn {
+	color: #fff;
+}
+
+.btn-default {
+  background-color: #627990;
+  border-color: #627990;
+}
+
+.btn-default:hover{
+  background-color: #6d869f;
+  border-color: #6d869f;
+  color: #fff;
+}
+
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default{
+  background-color: #596e82;
+  border-color: #596e82;
+}
+
+.btn-github {
+	margin-top: 20px;
+}
+
+h1.lead {
+	margin-top: 25px;
+	font-size: 46px;
+}
+
+h2.sub {
+	color: #617aa7;
+	font-size: 30px;
+	line-height: 1.6;
+}
+
+h1.and {
+	color: #1b2936;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.col-lg-5 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.logo-block {
+	height: 334px;
+	padding-top: 25px;
+	border-radius: 4px;
+	margin-top: 25px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 6px;
+	margin-left: 10px;
+}
+
+.indicators {
+	margin-top: -20px;
+	padding-top: 3px;
+	padding-left: 3px;
+	height: 20px;
+	width: 70px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 9px;
+	height: 9px;
+	background-color: #d8d6df;
+	float: left;
+	margin-right: 5px;
+}
+
+.logo-inner {
+	background-color: #2e4052;
+	height: 300px;
+}
+
+.logo {
+	height: 120px;
+	padding: 30px;
+}
+
+.title {
+	margin-top: 15px;
+	padding-left: 100px;
+}
+
+.get-started li {
+	font-size: 16px;
+	margin-left: -22px;
+	font-weight: 300;
+}
+
+.deployed-with {
+	margin-left: -20px;
+}
+
+.navbar-default .navbar-nav>li>a.twitter {
+	color: #55acee;
+}
+
+.navbar-default .navbar-nav>li>a.twitter:hover {
+	color: #78B7E7;
+}
+
+.navbar-default .navbar-nav>li>a.google-plus {
+	color: #dd4c39;
+}
+
+.navbar-default .navbar-nav>li>a.google-plus:hover {
+	color: #dc6656;
+}
+
+footer {
+	background-color: #2e4052;
+	margin-top: 60px;
+	padding: 10px 0 10px 0; 
+}
+
+</style>
+<body>
+	<header class="navbar navbar-default" role="banner">
+  <div class="container">
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar">
+      	<li><a href="deployed-with">Deployed With ElasticBox</a></li>
+      	<li><a class="twitter" href="http://twitter.com/share?text=I%20just%20deployed%20a%20website%20using%20Docker%20and%20ElasticBox%20&via=ElasticBox&url=http%3A%2F%2Fwww.elasticbox.com" target="_blank" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i> Tweet</a></li>
+      	<li><a class="google-plus" href="https://plus.google.com/share?url={http://www.elasticbox.com}&text={I just deployed a website using Docker and ElasticBox}" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i> Share</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li{% if page.slug == "about" %} class="active"{% endif %}>
+          <button type="button" href="#sign-up-modal" class="btn btn-default navbar-btn hidden-xs">TRY FOR FREE</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+	<div class="main">
+		<div class="jumbotron">
+			<div class="container">
+			<div class="col-lg-5 text-center logo-block">
+				<div class="indicators">
+					<span class="circle"></span>
+					<span class="circle"></span>
+					<span class="circle"></span>
+				</div>
+				<div class="logo-inner">
+					<img class="logo" src="https://dl.dropboxusercontent.com/u/11221717/elasticbox-flat-color-white.svg"></img>
+					<h1 class="and">&</h1>
+					<img class="logo" src="http://www.docker.com/static/img/docker-white.svg"></img>
+				</div>	
+			</div>
+			<div class="col-lg-6 title">
+				<h1 class="lead">Deploy In Mintues With Tools You Love</h1>
+				<h2 class="sub">A Modern Workflow For Your Flexible Application Topologies.</h2>
+				<button class="btn btn-default btn-lg btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
+			</div>
+		</div>
+		</div>
+		<div class="container">
+			<div class="col-lg-3">
+				<h3>Resources</h3>
+				<hr></hr>
+				<ul class="get-started">
+					<li>Getting Started</li>
+					<li>How To Deploy</li>
+					<li>Sign Up For ElasticBox</li>
+					<li>What Is ElasticBox</li>
+					<li>What Is Container Docker</li>
+					<li>ElasticBox Documentation</li>
+				</ul>
+			</div>
+			<div class="col-lg-8">
+				<div class="row">
+					<h3>Getting Started.</h3>
+					<hr></hr>
+					<p>You can deploy this static website on AWS using ElasticBox and Docker. We have created a very simple Docker container in ElasticBox that allows you to take static html from a Github repo and deploy on your Amazon Web Services account or other provider of your choice.</p>
+					<p>In order to deploy this website, you’ll need a few things. First, you will need an account on <a href="">ElasticBox</a>. If you don’t already have an account, you can sign up <a href="">here</a>. You’ll also need an account on <a href="">Amazon Web Services</a>. If you don’t already have an account, you can setup your account <a href="">here</a>.</p>
+					<p>Once that’s done, you can deploy this site within minutes by following the steps below! </p>
+				</div>
+				<div class="row">
+					<h3>Deploy This Website With Docker And ElasticBox.</h3>
+					<hr></hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+				</div>
+				<div class="row">
+					<h3>What is ElasticBox and what are Boxes?</h3>
+					<hr></hr>
+					<p>ElasticBox makes it easy for developers and enterprises to deploy and manage their applications on any cloud infrastructure. ElasticBox provides a simplified, modular, service based application development structure, where fully configured components of an application architecture are encapsulated as “Boxes” and made available as a service. </p>
+					<p>Boxes are reusable, versionable, available as a service, and then fully mobile across cloud environments. To create a multi-tier application architecture, one simply “stacks” Boxes. The result? DevOps at your fingertips.</p>
+				</div>
+				<div class="row">
+					<h3>What is Docker and what are Containers?</h3>
+					<hr></hr>
+					<p>Docker is an open-source project to easily create lightweight, portable, self-sufficient containers from any application. The same container that a developer builds and tests on a laptop can run at scale, in production, on VMs, bare metal, OpenStack clusters, public clouds and more.</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<footer>
+		<div class="container">
+			<img class="footer-brand" src="https://dl.dropboxusercontent.com/u/11221717/elasticbox-flat-dark-footer.svg"></img>
+		</div>
+	</footer>
 </body>
 </html>
