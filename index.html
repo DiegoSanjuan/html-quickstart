@@ -209,16 +209,16 @@ footer {
 				<h3>Resources</h3>
 				<hr></hr>
 				<ul class="get-started">
-					<li>Getting Started</li>
-					<li>How To Deploy</li>
-					<li>Sign Up For ElasticBox</li>
-					<li>What Is ElasticBox</li>
-					<li>What Is Container Docker</li>
-					<li>ElasticBox Documentation</li>
+					<li><a target="blank" href="#getting-started">Getting Started</a></li>
+					<li><a target="blank" href="#deploy">How To Deploy</a></li>
+					<li><a target="blank" href="http://www.elasticbox.com/signup">Sign Up For ElasticBox</a></li>
+					<li><a target="blank" href="#elasticbox">What Is ElasticBox</a></li>
+					<li><a target="blank" href="#docker">What Is Container Docker</a></li>
+					<li><a target="blank" href="http://support.elasticbox.com">ElasticBox Documentation</a></li>
 				</ul>
 			</div>
 			<div class="col-lg-8">
-				<div class="row">
+				<div class="row" id="getting-started">
 					<h3>Getting Started.</h3>
 					<hr></hr>
 					<p>Want to use Docker containers in your deployments? This quick start gives a feel for launching a docker environment quickly using ElasticBox. Here, you have a pre-built Docker box that lets you deploy a static web page to AWS in an isolated container based on Docker.</p>
@@ -229,7 +229,7 @@ footer {
 							<li>And an account on <a href="http://aws.amazon.com/">Amazon Web Services</a>.</li>
 						</ul>
 				</div>
-				<div class="row">
+				<div class="row" id="deploy">
 					<h3>Deploy This Website With Docker And ElasticBox.</h3>
 					<hr></hr>
 					<p>In order to deploy this web page on AWS, follow the simple instructions below:</p>
@@ -248,13 +248,13 @@ footer {
 					</ol>
 					<p><strong>Summary:</strong> When you deploy, the box creates an Ubuntu Docker container based on the PHP, Apache that’s accessible through port 80. In the container, the box uses a GitHUB box to install Git using YUM (a package management tool), and uses the Git repository box to clone a sample web page to the Apache directory. Through the port endpoint, you can now access the web page served on Apache in the Docker environment.</p>
 				</div>
-				<div class="row">
+				<div class="row" id="elasticbox">
 					<h3>What is ElasticBox and what are Boxes?</h3>
 					<hr></hr>
 					<p>ElasticBox makes it easy for developers and enterprises to deploy and manage their applications on any cloud infrastructure. ElasticBox provides a simplified, modular, service based application development structure, where fully configured components of an application architecture are encapsulated as “Boxes” and made available as a service. </p>
 					<p>Boxes are reusable, versionable, available as a service, and then fully mobile across cloud environments. To create a multi-tier application architecture, one simply “stacks” Boxes. The result? DevOps at your fingertips.</p>
 				</div>
-				<div class="row">
+				<div class="row" id="docker">
 					<h3>What is Docker and what are Containers?</h3>
 					<hr></hr>
 					<p>Docker is an open-source project to easily create lightweight, portable, self-sufficient containers from any application. The same container that a developer builds and tests on a laptop can run at scale, in production, on VMs, bare metal, OpenStack clusters, public clouds and more.</p>
