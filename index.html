@@ -23,7 +23,7 @@ p {
 }
 
 .jumbotron {
-	background-color: #2e4052;
+	background-color: #2c3c5c;
 	margin-top: -30px;
 }
 
@@ -87,7 +87,8 @@ h1.and {
 	padding-top: 25px;
 	border-radius: 4px;
 	margin-top: 25px;
-	background-color: rgba(255,255,255,0.2);
+	background-color: #627990;
+/*	border: 2px solid #e0ebf4;*/
 	border-radius: 6px;
 	margin-left: 10px;
 }
@@ -102,15 +103,16 @@ h1.and {
 
 .circle {
 	border-radius: 50%;
-	width: 9px;
-	height: 9px;
-	background-color: #d8d6df;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #e0ebf4;
+	background-color: #fff;
 	float: left;
-	margin-right: 5px;
+	margin-right: 7px;
 }
 
 .logo-inner {
-	background-color: #2e4052;
+	background-color: #2c3c5c;
 	height: 300px;
 }
 
@@ -124,10 +126,14 @@ h1.and {
 	padding-left: 100px;
 }
 
-.get-started li {
+p, li {
 	font-size: 16px;
-	margin-left: -22px;
 	font-weight: 300;
+	line-height: 1.6;
+}
+
+.get-started > li {
+	margin-left: -22px;
 }
 
 .deployed-with {
@@ -215,15 +221,32 @@ footer {
 				<div class="row">
 					<h3>Getting Started.</h3>
 					<hr></hr>
-					<p>You can deploy this static website on AWS using ElasticBox and Docker. We have created a very simple Docker container in ElasticBox that allows you to take static html from a Github repo and deploy on your Amazon Web Services account or other provider of your choice.</p>
-					<p>In order to deploy this website, you’ll need a few things. First, you will need an account on <a href="">ElasticBox</a>. If you don’t already have an account, you can sign up <a href="">here</a>. You’ll also need an account on <a href="">Amazon Web Services</a>. If you don’t already have an account, you can setup your account <a href="">here</a>.</p>
-					<p>Once that’s done, you can deploy this site within minutes by following the steps below! </p>
+					<p>Want to use Docker containers in your deployments? This quick start gives a feel for launching a docker environment quickly using ElasticBox. Here, you have a pre-built Docker box that lets you deploy a static web page to AWS in an isolated container based on Docker.</p>
+					<p>By the end of the quick start, you should be able to start using the sample box as a template to build your own Docker deployments.</p>
+					<p>Before you begin, you’ll need a few things.</p>
+						<ul>
+							<li>First, you need an account on <a href="http://www.elasticbox.com">ElasticBox</a>. If you don’t have one, sign up <a href="http://www.elasticbox.com/signup">here</a>.</li>
+							<li>And an account on <a href="http://aws.amazon.com/">Amazon Web Services</a>.</li>
+						</ul>
 				</div>
 				<div class="row">
 					<h3>Deploy This Website With Docker And ElasticBox.</h3>
 					<hr></hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing egestas lorem. Duis vulputate augue eu enim porta dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas bibendum varius elit, nec sodales arcu cursus.</p>
+					<p>In order to deploy this Webpage on AWS, follow the steps bellow:</p>
+					<ol>
+						<li>On the ElasticBox Providers page, add your AWS account with an access key ID and secret. If you don't have your account key and secret, visit this <a href="https://console.aws.amazon.com/iam/home?#security_credential">link</a>. ElasticBox brings up all the AMIs in your account.</li>
+						<li>If you don’t have already have an AMI based on Ubuntu 13.04, find it using the <a href="http://cloud-images.ubuntu.com/locator/ec2/">Ubuntu locator</a>. Then add the AMI to your AWS account under Machine Images. You need this AMI because docker only works with this Ubuntu Machine Image on AWS.</li>
+						<li>You’re now ready to create an instance of Docker to serve a simple web page.
+							<ul>
+								<li>From the Instances page, click New <strong>Instance</strong>.</li>
+								<li>Find and select the Docker box. You get a New Instance dialog.</li>
+								<li>In the dialog, give an environment name like dev, test, or staging to identify the deployment.</li>
+								<li>Create a new deployment profile to verify deployment settings. Select your AWS account and make sure you have the right Ubuntu AMI image selected. Add a key pair to be able to SSH into the instance once launched.</li>
+								<li>Save the deployment profile and click <strong>Deploy</strong>.</li>
+							</ul>
+						</li>
+					</ol>
+					<p><strong>Summary:</strong> When you deploy, the box creates an Ubuntu Docker container based on the PHP, Apache that’s accessible through port 80. In the container, the box uses a GitHUB box to install Git using YUM (a package management tool), and uses the Git repository box to clone a sample web page to the Apache directory. Through the port endpoint, you can now access the web page served on Apache in the Docker environment.</p>
 				</div>
 				<div class="row">
 					<h3>What is ElasticBox and what are Boxes?</h3>
