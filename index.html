@@ -22,6 +22,11 @@ p {
 	font-weight: 300;
 }
 
+.deployed-with {
+	padding-top: 13px;
+	padding-right: 10px;
+}
+
 .jumbotron {
 	background-color: #2c3c5c;
 	margin-top: -30px;
@@ -88,7 +93,6 @@ h1.and {
 	border-radius: 4px;
 	margin-top: 25px;
 	background-color: #627990;
-/*	border: 2px solid #e0ebf4;*/
 	border-radius: 6px;
 	margin-left: 10px;
 }
@@ -136,10 +140,6 @@ p, li {
 	margin-left: -22px;
 }
 
-.deployed-with {
-	margin-left: -20px;
-}
-
 .navbar-default .navbar-nav>li>a.twitter {
 	color: #55acee;
 }
@@ -168,15 +168,15 @@ footer {
   <div class="container">
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav navbar">
-      	<li><a href="deployed-with">Deployed With ElasticBox</a></li>
+      	<li class="deployed-with">Deployed With ElasticBox</li>
       	<li><a class="twitter" href="http://twitter.com/share?text=I%20just%20deployed%20a%20website%20using%20Docker%20and%20ElasticBox%20&via=ElasticBox&url=http%3A%2F%2Fwww.elasticbox.com" target="_blank" onclick="javascript:window.open(this.href,
   '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i> Tweet</a></li>
       	<li><a class="google-plus" href="https://plus.google.com/share?url={http://www.elasticbox.com}&text={I just deployed a website using Docker and ElasticBox}" onclick="javascript:window.open(this.href,
   '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i> Share</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li{% if page.slug == "about" %} class="active"{% endif %}>
-          <button type="button" href="#sign-up-modal" class="btn btn-default navbar-btn hidden-xs">TRY FOR FREE</button>
+        <li>
+          <button type="button" href="http://www.elasticbox.com/signup" class="btn btn-default navbar-btn hidden-xs">TRY FOR FREE</button>
         </li>
       </ul>
     </nav>
@@ -200,7 +200,7 @@ footer {
 			<div class="col-lg-6 title">
 				<h1 class="lead">Deploy In Mintues With Tools You Love</h1>
 				<h2 class="sub">A Modern Workflow For Your Flexible Application Topologies.</h2>
-				<button class="btn btn-default btn-lg btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button>
+				<a href="https://github.com/ElasticBox/html-quickstart"><button class="btn btn-default btn-lg btn-github"><i class="fa fa-github"></i> VIEW ON GITHUB</button></a>
 			</div>
 		</div>
 		</div>
